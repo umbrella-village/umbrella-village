@@ -34,10 +34,10 @@
           <td>이메일</td>
           <td><sec:authentication property="principal.email" /></td>
       </tr>
-<%--       <tr>
+      <tr>
           <td>권한</td>
           <td><sec:authentication property="principal.userType" /></td>
-      </tr> --%>
+      </tr>
     </table>
 
     <a class="btn" href="${R}logout_processing">로그아웃</a>

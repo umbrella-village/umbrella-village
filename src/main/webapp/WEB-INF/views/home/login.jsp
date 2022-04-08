@@ -29,6 +29,7 @@
       </tr>
     </table>
     <button type="submit" class="btn">로그인</button>
+    <a href="signUp" class="btn">회원 가입</a>
 
     <c:if test="${ param.error != null }">
       <div class="error">로그인 실패</div>

@@ -42,12 +42,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-		/*
-		 * http.authorizeRequests()
-		 * .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
-		 * .antMatchers("/professor/**").access("hasRole('ROLE_PROFESSOR')")
-		 * .antMatchers("/user/**").authenticated();
-		 */
+
+    	// 권한 설정
+		http.authorizeRequests()
+			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
+			.antMatchers("/professor/**").access("hasRole('ROLE_PROFESSOR')")
+		 	.antMatchers("/user/**").authenticated();
+
 
     	// 로그인 페이지 설정
         http.formLogin()

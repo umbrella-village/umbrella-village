@@ -21,5 +21,8 @@ public class User {
     String email;
     String phone;
     boolean enabled;
+    String userType;
+    boolean admin;
+
 }
 
