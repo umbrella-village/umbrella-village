@@ -17,15 +17,6 @@
 <div class="container">
   <div class="box">
     <h1>사용자 페이지</h1>
-    
-    <sec:authorize access="authenticated">
-      <a href="${R}index" class="link">Home</a>
-      <a href="${R}about" class="link">About</a>
-      <a href="${R}rent" class="link">Rent</a>
-      <a class="link" href="${R}user/index">Mypage</a>
-      <a class="link" href="${R}logout_processing">Logout</a>
-    </sec:authorize>
-    
     <table>
       <tr>
           <td>로그인ID</td>
@@ -48,6 +39,8 @@
           <td><sec:authentication property="principal.userType" /></td>
       </tr>
     </table>
+
+    <a class="btn" href="${R}logout_processing">로그아웃</a>
   </div>
 </div>
 </body>

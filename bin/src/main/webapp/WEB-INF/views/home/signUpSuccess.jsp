@@ -14,16 +14,6 @@
 <div class="container">
   <div class="box">
     <h3>회원 가입 성공</h3>
-    
-    <sec:authorize access="not authenticated">
-      <a href="index" class="link">Home</a>
-      <a href="about" class="link">About</a>
-      <a href="rent" class="link">Rent</a>
-      <a href="login" class="link">Mypage</a>
-      <a href="signUp" class="link">SignUp</a>
-      <a class="link" href="${R}login">Login</a>
-    </sec:authorize>
-    
     <a href="login" class="btn">로그인</a>
   </div>
 </div>

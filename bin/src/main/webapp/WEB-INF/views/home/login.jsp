@@ -27,16 +27,6 @@
 <div class="container">
   <form method="post" action="${R}login_processing" class="box">
     <h1>우산 빌리지</h1>
-    
-    <sec:authorize access="not authenticated">
-      <a href="index" class="link">Home</a>
-      <a href="about" class="link">About</a>
-      <a href="rent" class="link">Rent</a>
-      <a href="login" class="link">Mypage</a>
-      <a href="signUp" class="link">SignUp</a>
-      <a class="link" href="${R}login">Login</a>
-    </sec:authorize>
-
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
     <table>   
       <tr>

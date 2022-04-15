@@ -14,24 +14,16 @@
 <body>
 <div class="container">
   <div class="box">
-    <h1>Home</h1>
+    <h1>첫 페이지</h1>
 
     <sec:authorize access="not authenticated">
-      <a href="index" class="link">Home</a>
-      <a href="about" class="link">About</a>
-      <a href="rent" class="link">Rent</a>
-      <a href="login" class="link">Mypage</a>
-      <a href="signUp" class="link">SignUp</a>
-      <a class="link" href="${R}login">Login</a>
+      <a class="btn" href="${R}login">로그인</a>
+      <a href="signUp" class="btn">회원 가입</a>
     </sec:authorize>
     <sec:authorize access="authenticated">
-      <a href="index" class="link">Home</a>
-      <a href="about" class="link">About</a>
-      <a href="rent" class="link">Rent</a>
-      <a class="link" href="${R}user/index">Mypage</a>
-      <a class="link" href="${R}logout_processing">Logout</a>
+      <a class="btn" href="${R}user/index">사용자 페이지</a>
+      <a class="btn" href="${R}logout_processing">로그아웃</a>
     </sec:authorize>
-    
   </div>
 </div>
 </body>

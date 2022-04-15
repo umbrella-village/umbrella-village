@@ -24,10 +24,21 @@ public class HomeController {
         return "home/index";
     }
 
+    @RequestMapping({"about"})
+    public String about() {
+        return "home/about";
+    }
+
+    @RequestMapping({"rent"})
+    public String rent() {
+        return "home/rent";
+    }
+
     @RequestMapping("login")
     public String login() {
         return "home/login";
     }
+
 
     @GetMapping("signUp")
     public String signup(Model model) {

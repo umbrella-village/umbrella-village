@@ -18,16 +18,6 @@
 <div class="container">
   <div class="box">
     <h1>회원 가입</h1>
-    
-    <sec:authorize access="not authenticated">
-      <a href="index" class="link">Home</a>
-      <a href="about" class="link">About</a>
-      <a href="rent" class="link">Rent</a>
-      <a href="login" class="link">Mypage</a>
-      <a href="signUp" class="link">SignUp</a>
-      <a class="link" href="${R}login">Login</a>
-    </sec:authorize>
-    
     <form:form method="post" modelAttribute="userSignUp">
       <div>
         <div class="label">아이디:</div>
