@@ -37,6 +37,7 @@
       <a class="link" href="${R}login">Login</a>
     </sec:authorize>
 
+
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
     <table>   
       <tr>
