@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CREATE DATABASE  IF NOT EXISTS `umbrella` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `umbrella`;
 -- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
@@ -137,3 +138,6 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2022-04-03 20:40:53
+=======
+SELECT * FROM umbrella.user;
+>>>>>>> 9fdf5e73ed738f715f499587a37a95391e2df045

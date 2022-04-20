@@ -1,3 +1,4 @@
+
 package net.skhu.controller;
 
 import org.springframework.stereotype.Controller;
@@ -12,4 +13,3 @@ public class UserController {
         return "user/index";
     }
 }
-

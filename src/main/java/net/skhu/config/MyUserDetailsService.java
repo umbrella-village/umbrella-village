@@ -1,3 +1,4 @@
+
 package net.skhu.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,3 @@ public class MyUserDetailsService implements UserDetailsService {
     }
 
 }
-
-// Spring Security에 필요한 서비스클래스
-// username 로그인 아이디로 사용자를 조회. username에 해당하는 사용자를 찾을 수 없다면 exception
-// 입력된 패스워드와 MyUserDatails 객체의 패스워드 비교
