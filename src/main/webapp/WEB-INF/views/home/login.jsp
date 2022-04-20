@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:url var="R" value="/" />
-<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -41,10 +37,8 @@
         <td><input type="password" placeholder="비밀번호" name="passwd" /></td>
       </tr>
     </table>
-    <button type="submit" class="btn">로그인</button>
-    
+    <button type="submit" class="btn">로그인</button>    
     <a href="signUp" class="signup">회원 가입</a>
-
     <c:if test="${ param.error != null }">
       <div class="error">로그인 실패</div>
     </c:if>

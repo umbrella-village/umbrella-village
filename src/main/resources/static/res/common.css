@@ -1,4 +1,3 @@
-/*div.container { width: 800px; margin: 10px auto; font-size: 10pt; }*/
 .btn  { padding: 0.4em 1em; border: 1px solid gray;
        border-radius: 0.5em; background: linear-gradient(#fff, #ddd);
        text-decoration: none; color: black;  display: inline-block;  cursor: pointer;}
