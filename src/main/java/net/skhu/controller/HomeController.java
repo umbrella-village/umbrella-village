@@ -50,6 +50,10 @@ public class HomeController {
     public String signupSuccess() {
         return "home/signUpSuccess";
     }
+    @RequestMapping("about")
+    public String about() {
+        return "home/about";
+    }
 
 }
 
