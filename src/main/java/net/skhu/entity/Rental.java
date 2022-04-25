@@ -16,7 +16,7 @@ import lombok.Data;
 public class Rental {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int rental_id;
+    int rentalid;
 
     Date startdate;
     Date returndate;

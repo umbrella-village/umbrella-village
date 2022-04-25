@@ -21,6 +21,7 @@
       <a href="signUp" class="btn">회원 가입</a>
     </sec:authorize>
     <sec:authorize access="authenticated">
+      <a class="btn" href="${R}rental/list">대여목록</a>
       <a class="btn" href="${R}user/index">사용자 페이지</a>
       <a class="btn" href="${R}logout_processing">로그아웃</a>
     </sec:authorize>

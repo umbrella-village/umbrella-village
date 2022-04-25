@@ -39,7 +39,6 @@
           <td><sec:authentication property="principal.userType" /></td>
       </tr>
     </table>
-
     <a class="btn" href="${R}logout_processing">로그아웃</a>
   </div>
 </div>
