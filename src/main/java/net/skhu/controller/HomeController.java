@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import net.skhu.model.UserSignUp;
+import net.skhu.repository.LocationRepository;
 import net.skhu.service.UserService;
-
 
 @Controller
 public class HomeController {
 
+	@Autowired LocationRepository locationRepository;
 	@Autowired UserService userService;
 
     @RequestMapping({"/", "index"})
@@ -30,8 +31,9 @@ public class HomeController {
         return "home/about";
     }
 
-    @RequestMapping({"rent"})
-    public String rent() {
+    @RequestMapping({"rent"}) //
+    public String rent(Model model) {
+        model.addAttribute("locations", locationRepository.findAll());
         return "home/rent";
     }
 
