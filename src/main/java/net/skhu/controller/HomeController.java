@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import net.skhu.model.UserSignUp;
 import net.skhu.service.UserService;
 
-
 @Controller
 public class HomeController {
 
@@ -49,6 +48,11 @@ public class HomeController {
     @RequestMapping("signUpSuccess")
     public String signupSuccess() {
         return "home/signUpSuccess";
+    }
+    
+    @RequestMapping("about")
+    public String about() {
+        return "home/about";
     }
 
 }
