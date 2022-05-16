@@ -89,7 +89,7 @@ div.box {
 저희가 제작한 교내 우산 대여 웹 서비스 <b class="main_font_color">'우산 빌리지'</b>는 이런 고민들을 해결할 수 있는 좋은 웹 서비스입니다.</p>
 <img class="main_image" style="width:100px; margin-bottom:0px;" src="resources/img/main/우산빌리지.png">
     <img  class = "main_image" style="width:80%; margin-bottom:20px;" src="resources/img/main/메인테스트.png">
-    <p class="font_center">더 자세한 이용방법을 알고싶다면? <a href="#">더보기</a></p>
+    <p class="font_center">더 자세한 이용방법을 알고싶다면? <a href="about">더보기</a></p>
     </div>
     
     
@@ -102,8 +102,13 @@ div.box {
             Sign up</a>
          </div>
       </div>
-      <div class="container">
+      <div style="margin-top:100px; text-align:center;" class="container">
       <!-- 나중에 추가할 요소 있을때 추가 -->
+      <img  class = "main_image" style="width:90%; margin-bottom:10px;" src="resources/img/main/기부명단.png">
+      <marquee  height="60" scrolldelay="10" behavior="scroll" direction="up">
+      	<p>조세은</p><p>김예린</p><p>남채희</p><p>이사랑</p>
+      </marquee>
+      <p class="font_center" style="color:525252; margin: 40 0 0 0">나도 우산을 기부하고싶다면? <a href="about">더보기</a></p>
       </div>
    
 <br><br>

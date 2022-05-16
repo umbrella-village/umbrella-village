@@ -25,13 +25,13 @@
     <form method="post" action="${R}login_processing">
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
       <div>
-        <div class="label">아이디:</div>
+        <div class="label">아이디</div>
         <input type="text" placeholder="아이디" name="userid" />
-      </div>
+      </div><br>
       <div>
-        <div class="label">비밀번호:</div>
+        <div class="label">비밀번호</div>
         <input type="password" placeholder="비밀번호" name="passwd" />
-      </div>
+      </div><br>
       <button type="submit" class="btn btn-xl btn-outline-light">로그인</button>
       <button type="button" class="btn btn-xl btn-outline-light"  onclick = "location.href ='${R}'">취소</button>
       

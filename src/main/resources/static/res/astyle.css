@@ -1,47 +1,59 @@
-* {
-    margin: 0; padding: 0;
-    box-sizing: border-box;
+  .title_font{
+  font-family: 'TTTogether';
   }
+  
   th{text-align: left; }
+  
   #umimg{
-    text-align: center;
+    text-align: left;
   }
+  
   #tables{ top: 10px;}
+  
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'GyeonggiTitleM';
     color: #161d21;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjus: 100%;  
+
   }
+  
   ul{list-style:none;}
+  
   li { list-style: none; }
+  
   a { text-decoration: none; }
+  
   h1, h2, h3, h4, h5, h6, p {
     margin: 15px 5px;
   }
+  
   h1 { font-size: 1.8em; }
- img{margin: 10px;}
-  aside {   
+  
+ 
+  aside {  
     position: fixed;
-    top: 10px;
+    top: -10px;
     bottom: 0;
     width: 200px; 
     padding-top: 25px;
     background-color: #5485ae;
   }
+  
   aside > ul {
     width: 200px;
   }
+  
   aside > ul > li > a {
     display: block;
     color: #fff;
     padding:10px 0 10px 20px;
   }  
+  
   aside > ul >li> a:hover{
-    background-color:#777;
+    background-color:#42698a;
   }
+  
   aside > h1 {
-    padding: 20px 0 20px 20px;
+    padding: 20px 0 10px 20px;
     color: #fff;
   }
   section {  
@@ -53,7 +65,7 @@
   .tab_menu .list{overflow:hidden;}
   .tab_menu .list li.is_on .btn{font-weight:bold; color:black;}
   .tab_menu .cont_area .cont{
-    left:200px; margin: 10px; padding:25px;  
+    left:200px; margin: 10px; padding:3 25 25 25px;  
     display:none; background-color: white; 
     }
  
@@ -61,7 +73,8 @@
     border-collapse: collapse;
     text-align: left;
     line-height: 1.5;  
-  } 
+  }
+   
   table.devinfo tbody th {
     width: 150px;
     padding: 10px;
@@ -76,9 +89,10 @@
     vertical-align: top;
     border-bottom: 1px solid #aaa;
   }
-  #wrapper{margin-top: 60px;}
+  
+  #wrapper{margin-top: 40px;}
 #wrapper .sub_tit{font-size: 24px; font-weight:  600;}
-#wrapper .guide-step {list-style: none; padding: 0; margin-top: 50px;}
+#wrapper .guide-step {list-style: none; padding: 0; margin-top: 50px; margin-bottom:50px;}
 #wrapper .guide-step:after{content:""; clear: both; display: block;}
 #wrapper .guide-step li{text-align: center; float: left; width:calc(20% + 6px);box-sizing:border-box;padding-left:30px;}
 #wrapper .guide-step li:first-child{width:calc(20% - 24px);}
