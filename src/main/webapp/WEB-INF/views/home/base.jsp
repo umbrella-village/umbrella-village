@@ -15,7 +15,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-font" >
 				<li class="nav-item"><a class="nav-link" aria-current="page" href="index">홈</a></li>
 				<li class="nav-item"><a class="nav-link" aria-current="page" href="about">공지사항</a></li>
-				<li class="nav-item"><a class="nav-link" aria-current="page" href="#">우산대여</a></li>
+				<li class="nav-item"><a class="nav-link" aria-current="page" href="rent">우산대여</a></li>
 				
 				<sec:authorize access="authenticated">
 					<li class="nav-item"><a class="nav-link" aria-current="page" href="${R}user/index">마이페이지</a></li>

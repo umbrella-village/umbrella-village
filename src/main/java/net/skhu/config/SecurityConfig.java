@@ -52,17 +52,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     	// 로그인 페이지 설정
         http.formLogin()
-            .loginPage("/login") // 로그인 페이지 url
-            .loginProcessingUrl("/login_processing") // 로그인 버튼 눌렀을 때 요청할 url
-            .failureUrl("/login?error") // 로그인 실패했을때 redirect할 url
-            .defaultSuccessUrl("/", true) // 로그인 성공했을때 redirect할 url
+            .loginPage("/login") // 로그인 페이지
+            .loginProcessingUrl("/login_processing") // 로그인 버튼 눌렀을 때
+            .failureUrl("/login?error") // 로그인 실패했을때 redirect
+            .defaultSuccessUrl("/", true) // 로그인 성공했을때 redirect
             .usernameParameter("userid")
             .passwordParameter("passwd");
 
         // 로그아웃 설정
         http.logout()
-            .logoutRequestMatcher(new AntPathRequestMatcher("/logout_processing")) // 로그아웃 버튼 눌렀을 때 요청할 url
-            .logoutSuccessUrl("/login") // 로그아웃할때 redirect할 url
+            .logoutRequestMatcher(new AntPathRequestMatcher("/logout_processing")) // 로그아웃 버튼 눌렀을 때
+            .logoutSuccessUrl("/login") // 로그아웃할때 redirect
             .invalidateHttpSession(true); // 세션 지우기
     }
 
