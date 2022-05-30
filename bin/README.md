@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 91734155ebeb7cb4579e8f14b48562862893b8b8
 # ☂️교내 우산 대여 웹 서비스 '우산빌리지'☂️
 
 ![001](https://user-images.githubusercontent.com/80515918/162880408-f10db33b-6c0b-4925-a67b-73a07532cfdd.png)
@@ -6,3 +10,9 @@
 ![006](https://user-images.githubusercontent.com/80515918/162880421-e85ecf06-e3cb-491e-8a45-8d815c6341b8.png)
 
 
+<<<<<<< HEAD
+=======
+=======
+# main
+>>>>>>> 9fdf5e73ed738f715f499587a37a95391e2df045
+>>>>>>> 91734155ebeb7cb4579e8f14b48562862893b8b8

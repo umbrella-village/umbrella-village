@@ -22,4 +22,5 @@ public class Location {
 
     @OneToMany(mappedBy="location")
     List<Umbrella> umbrellas;
+
 }

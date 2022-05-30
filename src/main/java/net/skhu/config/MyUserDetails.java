@@ -64,4 +64,3 @@ public class MyUserDetails implements UserDetails {
 		return null;
 	}
 }
-
