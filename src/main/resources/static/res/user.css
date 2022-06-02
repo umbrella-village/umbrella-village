@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title{
+	text-align:center;
+	font-family: 'TTTogether';
+	color: #5485ae;
+}
+
+body{
+	text-align:center;
+}
+
+.form-group{
+   
+}
+
+.btn-outline-light {
+  color: #5485ae;
+  border-color: #5485ae;
+  font-family: 'GyeonggiTitleM';
+}
+.btn-outline-light:hover {
+  color: rgb(255, 255, 255);
+  background-color: #5485ae;
+  border-color: #5485ae;
+  font-family: 'GyeonggiTitleM';
+}

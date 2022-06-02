@@ -3,10 +3,12 @@ package net.skhu.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
+import net.skhu.config.MyUserDetails;
 import net.skhu.entity.User;
 import net.skhu.model.UserSignUp;
 import net.skhu.repository.UserRepository;
@@ -54,5 +56,12 @@ public class UserService {
         userRepository.save(user);
     }
 
+    public User getCurrentUser() { // 현재 사용자
+       var myUserDetail = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+       if(myUserDetail instanceof MyUserDetails){
+          return ((MyUserDetails)myUserDetail).getUser();
+       }else{
+          return null;
+       }
+     }
 }
-

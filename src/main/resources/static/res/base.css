@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.nav-main-font{
+	font-family: 'TTTogether';
+}
+.nav-font{
+	font-family: 'GyeonggiTitleM';
+}
+
+.font_center{
+	text-align:center;
+}
+.container{
+	font-family: 'GyeonggiTitleM';
+}
+
+.logo_style{
+	width: 50px;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 0 !important;
+    align-items: center;
+}
+
+.footer{
+	font-family: 'GyeonggiTitleM';
+	background-color:#212529;
+	color:white;
+	padding-top: 100px;
+	padding-bottom: 50px !important;
+	margin-top: 100px;
+}
+
+.main_font_color{
+	color:#5485ae;
+}

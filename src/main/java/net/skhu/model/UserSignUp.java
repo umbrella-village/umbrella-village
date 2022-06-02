@@ -39,4 +39,3 @@ public class UserSignUp {
     @NotEmpty(message="사용자 유형을 선택하세요")
     String userType;
 }
-

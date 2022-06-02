@@ -16,22 +16,17 @@ import lombok.Data;
 public class Rental {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int rentalid;
+    int rental_id;
 
-    Date startdate;
-    Date returndate;
+    Date rentDate;
+    Date returnDate;
 
     @ManyToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn(name = "user_id")
     User user;
-    
+
     @ManyToOne
-    @JoinColumn(name="location_id")
-    Location location;
-    
-    @ManyToOne
-    @JoinColumn(name="umbrella_id")
+    @JoinColumn(name = "umbrella_id")
     Umbrella umbrella;
 
 }
-

@@ -2,12 +2,14 @@ package net.skhu.config;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import lombok.Data;
+import net.skhu.entity.Rental;
 import net.skhu.entity.User;
 
 
@@ -22,7 +24,7 @@ public class MyUserDetails implements UserDetails {
     final String password;
     final String username;
     final boolean isEnabled;
-    Collection<SimpleGrantedAuthority> authorities = new ArrayList<>(); // 권한 설정 생략
+    Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
 
     final String name;
     final String studentNumber;
@@ -30,11 +32,12 @@ public class MyUserDetails implements UserDetails {
     final String phone;
     final String userType;
     final boolean admin;
+    final List<Rental> rentals;
+
+    final User user;
 
     public MyUserDetails(User user) {
     	// DB에서 조회한 사용자 정보 들어있음
-
-
     	switch (user.getUserType()) {
     	case "교수": authorities.add(new SimpleGrantedAuthority("ROLE_PROFESSOR")); break;
 		case "학생": authorities.add(new SimpleGrantedAuthority("ROLE_STUDENT")); break;
@@ -50,6 +53,9 @@ public class MyUserDetails implements UserDetails {
         this.phone = user.getPhone();
         this.userType = user.getUserType();
         this.admin = user.isAdmin();
+        this.rentals = user.getRentals();
+
+        this.user = user;
     }
 
 	@Override
@@ -58,4 +64,3 @@ public class MyUserDetails implements UserDetails {
 		return null;
 	}
 }
-
