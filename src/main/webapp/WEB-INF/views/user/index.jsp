@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="${R}res/common.css">
   <style>
     div.box { padding: 30px; }
-    table { border-collapse: collapse; width: 400px; margin-bottom: 20px; }
+    table { border-collapse: collapse; width: fit-content; margin-bottom: 20px; }
     td { border: 1px solid #aaa; padding: 8px; }
   </style>
 </head>
@@ -39,7 +39,19 @@
           <td><sec:authentication property="principal.userType" /></td>
       </tr>
     </table>
-
+    <h3>대여중인 우산</h3>
+    <table class="table table-bordered mt5">
+    <thead>
+    <tr>
+    	<th>대여번호</th><th>대여일</th><th>반납일</th><th>위치</th><th>반납하기</th></tr></thead>
+    	<tbody>
+    	<c:forEach var="rental" items="${rental}">
+    	<tr>
+    	<th>${ rental.rental_id }</th><th>${ rental.rentDate }</th><th>${ rental.returnDate }</th><th>${ rental.umbrella.location.locationName }</th>
+    	<th><a href="returnDetail?userId=${ rental.user.id }" class="btn">반납</a>
+		</th></tr></c:forEach>
+    	</tbody>
+    </table>
     <a class="btn" href="${R}logout_processing">로그아웃</a>
   </div>
 </div>

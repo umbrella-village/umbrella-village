@@ -57,7 +57,7 @@ public class RentController {
 		Umbrella currentUmbrella = umbrellaRepository.findById(umbrella_id); // 대여하려는 우산
 
 		if (currentUser != null) { // DB 저장
-			rentalService.save(rentDate, currentUser, currentUmbrella);
+			rentalService.save(rentDate, null, currentUser, currentUmbrella);
 			umbrellaService.saveRentedOrNot(currentUmbrella, true); // 해당 우산을 대여중인 상태로 변경
 			return "rent/rentSuccess";
 		}
