@@ -1,55 +1,49 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ include file="/WEB-INF/views/home/base.jsp"%>
 <c:url var="R" value="/" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="${R}res/common.css">
+  <link rel="stylesheet" href="${R}res/user.css">
   <style>
-  	@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Poor+Story&display=swap');
-  	body{font-family: 'Cute Font', cursive;} 	
-  	.box{ width: 40%;   height: 500px;  background: white;  border-radius: 20px;
-  display: flex;  justify-content: center;  align-items: center;  flex-direction: column;}
-    h1 { text-align: center; font-size: 50px; }
-    .container { display: flex;	justify-content: center;  align-items: center;  min-height: 50vh; }
-    form { padding: 10px 30px 20px 30px; width: 250px; background-color: white; }
-    button { margin-top: 20px; margin-left: 5px; margin-bottom: 10px;}    
-    .error { color: red; }
-    input{width: 100%;  height: 50px; }
-   td{font-size: 30px;}
-    .btn{  width: 90%;   height: 50px;   border: 0;   outline: none;
-  border-radius: 40px;   background: linear-gradient(to left, rgb(55, 88, 237), rgb(162, 216, 250));
-  color: white;   font-size: 1.2em;   letter-spacing: 2px;}
-  </style>
+  div.box { padding: 50px; width: 300px; } 
+  div.label { margin-top:10px; }
+  .error { color: red; display: block; }
+  button { margin-top: 20px; }
+</style>
 </head>
 <body>
-<div class="container">
-  <form method="post" action="${R}login_processing" class="box">
-    <h1>우산 빌리지</h1>
+<div class="container" style="margin-top:150px;">
+    <h1 class="title">로그인</h1>
+    <hr style="color: #5485ae; margin-bottom:50px;">
+    <form method="post" action="${R}login_processing">
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-    <table>   
-      <tr>
-       <td>아이디</td>
-       </tr>
-       <tr>
-        <td><input type="text" placeholder="아이디" name="userid" /></td>       
-      </tr> 
-      <tr>
-         <td>비밀번호</td></tr>
-         <tr>
-        <td><input type="password" placeholder="비밀번호" name="passwd" /></td>
-      </tr>
-    </table>
-    <button type="submit" class="btn">로그인</button>
-    
-    <a href="signUp" class="signup">회원 가입</a>
-
-    <c:if test="${ param.error != null }">
-      <div class="error">로그인 실패</div>
-    </c:if>
-  </form>
+      <div>
+        <div class="label">아이디</div>
+        <input type="text" placeholder="아이디" name="userid" />
+      </div><br>
+      <div>
+        <div class="label">비밀번호</div>
+        <input type="password" placeholder="비밀번호" name="passwd" />
+      </div><br>
+      <button type="submit" class="btn btn-xl btn-outline-light">로그인</button>
+      <button type="button" class="btn btn-xl btn-outline-light"  onclick = "location.href ='${R}'">취소</button>
+      
+      <c:if test="${ param.error != null }">
+      	<div class="error">로그인 실패</div>
+      </c:if>
+    </form>
+    <hr style="color: #5485ae; margin-top: 50px; pargin-bottom:50px;">
+    <p>아직 계정이 없다면? <a href="signUp"> 회원가입</a></p>
 </div>
+
+
 </body>
 </html>
-
+<%@ include file="/WEB-INF/views/home/footer.jsp"%>

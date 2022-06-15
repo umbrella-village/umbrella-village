@@ -3,103 +3,54 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <c:url var="R" value="/" />
 <%@ include file="/WEB-INF/views/home/base.jsp"%>
-
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="${R}res/common.css">
-  <style>
-    * {
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    top:30px;
-    padding-top: 25px;
-  }    
-   
- table {
-    border-collapse: collapse;
-    text-align: left;
-    line-height: 1.5;  
-  }  
-   table td {
-    width: 350px;
-    padding: 10px;  
-  }
- 
-  #rentlist{       
-    margin-right: 350px; 
-  }
- .returnbtn{         
-    border-radius: 7px;  
-    width: 4em;    
-    cursor: pointer;
-    text-align: center;
-    background: none;      
-    font-size: 15px;    
-    outline: 0;
-    border: 2px solid #5485ae;    
-    color:white;
-    background-color: #5485ae;
-  }
-.returnbtn:hover{
- 	color: #5485ae;
-    background-color: white;
- }
- h1{ 
-   text-align: center;
-   color:#5485ae;
- }
-.btn{
-	color: #5485ae;
-}
-#myinfo{	
-	float: right;      
-    bottom: 0;
-    width: 310px; 
-    height: 350px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 0 4px lightgray, 2px 2px 4px lightgray;
-	}
-    
-  </style>
+  <link rel="stylesheet" href="${R}res/mypage.css">
 </head>
 <body>
 <div class="container" style="margin-top:150px;">
   
-     <h1>마이 페이지</h1><hr style="color: #5485ae; margin-bottom:50px;">  
+     <h1 class="title">MYPAGE</h1><hr style="color: #5485ae; margin-bottom:50px;">  
    <form id="myinfo"> <br>
+   <p class="title">Profile</p>
     <table>
+    <div id="umimg"><img style="width:50%; margin-bottom:20px;" src="/resources/img/main/프로필.png">  
       <tr>
-          <td>로그인ID</td>
+          <td class="blue">로그인ID</td>
           <td><sec:authentication property="name" /></td>
       </tr>
       <tr>
-          <td>이름</td>
+          <td class="blue">이름</td>
           <td><sec:authentication property="principal.name" /></td>
       </tr>
       <tr>
-          <td>학번</td>
+          <td class="blue">학번</td>
           <td><sec:authentication property="principal.studentNumber" /></td>
       </tr>
       <tr>
-          <td>이메일</td>
+          <td class="blue">이메일</td>
           <td><sec:authentication property="principal.email" /></td>
       </tr>
       <tr>
-          <td>권한</td>
+          <td class="blue">권한</td>
           <td><sec:authentication property="principal.userType" /></td>
-      </tr>
+      </tr>  
     </table>
+    <a class="btn btn-xl btn-outline-light" style="margin-top: 10px;" href="${R}logout_processing">로그아웃</a>
     </form>
+    
+    
+    
      <div id="rentlist"> 
-    <h3>현재 대여중인 우산</h3>
-    <table class="table table-bordered mt5">
+    <h3 class="list_txt"><i class="fa fa-check"></i> 현재 대여중인 우산</h3>
+    <table class="table table-bordered mt5" style="margin-bottom:50px;">
     <thead>
     <tr>
        <th>우산사진</th><th>우산번호</th><th>위치</th><th>대여일</th><th>반납하기</th></tr></thead>
@@ -122,8 +73,8 @@
     </table>
     
     
-    <h3>과거 우산 대여기록</h3>
-    <table class="table table-bordered mt5">
+    <h3 class="list_txt"><i class="fa fa-check"></i> 과거 우산 대여 기록</h3>
+    <table class="table table-bordered mt5" style="margin-bottom:300px;">
     <thead>
     <tr>
        <th>우산사진</th><th>우산번호</th><th>위치</th><th>대여일</th><th>반납일</th></tr></thead>
@@ -140,8 +91,7 @@
       </tr></c:forEach>
        </tbody>
     </table>    
-    </div>
-   <a class="btn" href="${R}logout_processing">로그아웃</a>    
+    </div>  
     
 </div>  
 <script>
