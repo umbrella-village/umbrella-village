@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%>
+
 <c:url var="R" value="/" />
 <%@ include file="/WEB-INF/views/home/base.jsp"%>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -61,7 +63,7 @@
        <c:choose>
          <c:when test="${ myRentals.returnDate eq null }">
              <th>${ myRentals.umbrella.id }</th><th>${ myRentals.umbrella.location.locationName }</th>
-             <th>${ myRentals.rentDate }</th>
+             <th><fmt:formatDate value="${ myRentals.rentDate }" pattern="yyyy-MM-dd"/></th>
             <th><form name="returnDetailSubmit" action="returnDetailSubmit" method="get" onsubmit="return check_f2()">
                   <input type="hidden" name= "myRentals.rental_id" id="myRentals.rental_id" value=${ myRentals.rental_id }>
                   <button class="returnbtn" type="submit">반납</button>
@@ -84,7 +86,8 @@
        <c:choose>
          <c:when test="${ !(myRentals.returnDate eq null) }">
              <th style="height:61.5px;">${ myRentals.umbrella.id }</th><th>${ myRentals.umbrella.location.locationName }</th>
-             <th>${ myRentals.rentDate }</th><th>${ myRentals.returnDate }</th>
+             <th><fmt:formatDate value="${ myRentals.rentDate }" pattern="yyyy-MM-dd"/></th>
+             <th><fmt:formatDate value="${ myRentals.returnDate }" pattern="yyyy-MM-dd"/></th>
          </c:when>
       </c:choose>
       </tr></c:forEach>
