@@ -53,13 +53,13 @@
     <table class="table table-bordered mt5" style="margin-bottom:50px;">
     <thead>
     <tr>
-       <th>우산사진</th><th>우산번호</th><th>위치</th><th>대여일</th><th>반납하기</th></tr></thead>
+    <thead>
+       <th>우산번호</th><th>위치</th><th>대여일</th><th>반납하기</th></tr></thead>
        <tbody>
        <c:forEach var="myRentals" items="${myRentals}">
        <tr>
        <c:choose>
          <c:when test="${ myRentals.returnDate eq null }">
-            <th><img src="resources/img/umbrella/${ umbrella.fileName }.jpg" style="width: 50px; height: 50px;" /></th>
              <th>${ myRentals.umbrella.id }</th><th>${ myRentals.umbrella.location.locationName }</th>
              <th>${ myRentals.rentDate }</th>
             <th><form name="returnDetailSubmit" action="returnDetailSubmit" method="get" onsubmit="return check_f2()">
@@ -77,14 +77,13 @@
     <table class="table table-bordered mt5" style="margin-bottom:300px;">
     <thead>
     <tr>
-       <th>우산사진</th><th>우산번호</th><th>위치</th><th>대여일</th><th>반납일</th></tr></thead>
+      <th>우산번호</th><th>위치</th><th>대여일</th><th>반납일</th></tr></thead>
        <tbody>
        <c:forEach var="myRentals" items="${myRentals}">
        <tr>
        <c:choose>
          <c:when test="${ !(myRentals.returnDate eq null) }">
-            <th><img src="resources/img/umbrella/${ umbrella.fileName }.jpg" style="width: 50px; height: 50px;" /></th>
-             <th>${ myRentals.umbrella.id }</th><th>${ myRentals.umbrella.location.locationName }</th>
+             <th style="height:61.5px;">${ myRentals.umbrella.id }</th><th>${ myRentals.umbrella.location.locationName }</th>
              <th>${ myRentals.rentDate }</th><th>${ myRentals.returnDate }</th>
          </c:when>
       </c:choose>

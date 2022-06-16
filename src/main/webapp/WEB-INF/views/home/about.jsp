@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<c:url var="R" value="/" />
 <%@ include file="/WEB-INF/views/home/base.jsp"%>
 <c:url var="R" value="/" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -115,14 +117,25 @@
           <h3><i class="fa fa-clock"></i> 운영시간</h3>
           <p>- 월요일 ~ 금요일 9:00 ~ 18:00 <br>- 주말 휴무</p><br>
 
-          <h3> <i class="fa fa-exclamation"></i> 대여 유의사항</h3>
+          <h3> <i class="fa fa-exclamation-circle"></i> 대여 유의사항</h3>
           <p>
             ● 대여 버튼을 누르게 되면 우산이 예약되며 마이페이지 우산대여목록에서 확인가능합니다. <br>
+            ● 우산을 대여할 때 예약한 번호와 같은 번호의 우산인지 꼭 확인바랍니다 <br>
             ● 예약한 우산은 타인에게 양도 및 판매할 수 없으며,
              비정상적인 방법으로 참여하실경우 우산빌리지의 운영 정책에 따라 제재 받을 수 있습니다. <br>
-             
-            ● 우산을 대여할 때 예약한 번호와 같은 번호의 우산인지 꼭 확인바랍니다 <br>
-            ● 추가 문의사항은 개발자 연락처로 문의 부탁드립니다.
+            ● 기본 대여 기간은 주말을 제외한 1일입니다. <br>
+            ● 대여 기간이 지연 될 경우, 사용자는 패널티를 받을 수 있으며, 기본으로 지연 반납료를 부과합니다. <br>
+            ● 모든 사용 신청은 관리자가 특정 상황에 따라 철회할 수 있습니다. <br>
+            ● 장기 대여의 경우, 관리자에게 문의 부탁드립니다. <br>
+            ● 추가 문의사항은 개발자 연락처로 문의 부탁드립니다.<br><br>
+          </p>
+          
+           <h3> <i class="fa fa-exclamation-triangle"></i> 반납 유의사항</h3>
+          <p>
+            ● 우산 반납 후, 관리자는 우산 상태를 확인하며 상태에 따라 사용자에게 반납 규정을 적용할 수 있습니다. <br>
+            ● 우산 대여 지연시, 지연 반납료가 부과되며 하루마다 1000원씩 누적으로 부과됩니다. <br>
+            ● 우산 훼손 시, 훼손복구의 책임으로 책임비 2000원을 받습니다. <br>
+            ● 우산 분실 시, 분실복구의 책임으로 책임비 5000원을 받습니다. <br>
           </p>
         </article>
         </div>
