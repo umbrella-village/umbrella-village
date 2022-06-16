@@ -74,7 +74,7 @@
     
     
     <h3 class="list_txt"><i class="fa fa-check"></i> 과거 우산 대여 기록</h3>
-    <table class="table table-bordered mt5" style="margin-bottom:300px;">
+    <table class="table table-bordered mt5" style="margin-bottom:380px;">
     <thead>
     <tr>
       <th>우산번호</th><th>위치</th><th>대여일</th><th>반납일</th></tr></thead>
