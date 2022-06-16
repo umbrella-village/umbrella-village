@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title{
+	font-family: 'TTTogether';
+	color: #5485ae;
+}
+
+.list_txt{
+	color: #5485ae;
+	text-align:left;
+	font-weight: bold;
+}
+
+.blue{
+	color: #5485ae;
+}
+
+body{
+	text-align:center;
+	font-family: 'GyeonggiTitleM';
+}
+
+user_box {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    top:30px;
+    padding-top: 25px;
+  }    
+   
+ table {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5; 
+    marign-top: 100px; 
+  }  
+   table td {
+    width: 350px;
+    padding: 10px;
+  }
+  thead{
+    background-color : #f1f4f8;
+   }
+   table th:nth-child(1){
+    width:150px;
+    }
+ table th:nth-child(2){
+    width:195px;
+    }
+    table th:nth-child(3){
+    width:300px;
+    }
+  #rentlist{       
+    margin-right: 350px; 
+  }
+ .returnbtn{         
+    border-radius: 7px;  
+    width: 4em;    
+    cursor: pointer;
+    text-align: center;
+    background: none;      
+    font-size: 15px;    
+    outline: 0;
+    border: 2px solid #5485ae;    
+    color:white;
+    background-color: #5485ae;
+  }
+.returnbtn:hover{
+ 	color: #5485ae;
+    background-color: white;
+ }
+ h1{ 
+   text-align: center;
+   color:#5485ae;
+ }
+.btn{
+	color: #5485ae;
+}
+#myinfo{	
+	float: right;      
+    bottom: 0;
+    width: 310px; 
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 4px lightgray, 2px 2px 4px lightgray;
+	}
+	
+	.btn-outline-light {
+  color: #5485ae;
+  border-color: #5485ae;
+  font-family: 'GyeonggiTitleM';
+}
+.btn-outline-light:hover {
+  color: rgb(255, 255, 255);
+  background-color: #5485ae;
+  border-color: #5485ae;
+  font-family: 'GyeonggiTitleM';
+}

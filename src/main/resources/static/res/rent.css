@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title{
+	text-align:center;
+	font-family: 'TTTogether';
+	color: #5485ae;
+}
+
+body{
+	text-align:center;
+}
+
+.form-group{
+   
+}
+.box { box-shadow: 0 0 4px lightgray, 2px 2px 4px lightgray; }
+
+.btn-outline-light {
+  color: #5485ae;
+  border-color: #5485ae;
+  font-family: 'GyeonggiTitleM';
+}
+.btn-outline-light:hover {
+  color: rgb(255, 255, 255);
+  background-color: #5485ae;
+  border-color: #5485ae;
+  font-family: 'GyeonggiTitleM';
+}
+.btn-outline-rent{
+	color: rgb(255, 255, 255);
+  background-color: #5485ae;
+  border-color: #5485ae;
+  font-family: 'GyeonggiTitleM';
+}
+.btn-outline-rent:hover{
+	color: rgb(255, 255, 255);
+  background-color: #5485ae;
+  border-color: #5485ae;
+  font-family: 'GyeonggiTitleM';
+}
+
+.reading{
+	text-align:left; margin-left:50px; color: grey;
+}
+
+table.list { border-collapse: collapse; margin-bottom:50px;}
+table.list td { padding: 6px; border: 1px solid #ccc; }
+table.list th:nth-child(1) {  width:300px; padding: 6px; border: 1px solid #ccc; text-align:center;}
+table.list th:nth-child(2) {  width:1000px; padding: 6px; border: 1px solid #ccc; text-align:center;}
